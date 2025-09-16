@@ -1,73 +1,79 @@
-# Welcome to your Lovable project
+# CloudSync
 
-## Project info
+**Tagline:** “Your files. Anytime. Anywhere.”
 
-**URL**: https://lovable.dev/projects/3d9d4395-6f8c-4b31-bd69-c82d5e45ea9a
+CloudSync is a modern, responsive SaaS landing page designed for secure file storage and seamless team collaboration, similar to Dropbox or Google Drive. Built with a clean, professional design and a fully responsive layout, this project demonstrates a complete startup website structure for SaaS products.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## Features
 
-**Use Lovable**
+### Hero Section
+- Eye-catching headline: “Simple, Secure, Smart Cloud Storage”
+- Subtext: “Collaborate with your team and access your files from anywhere in the world.”
+- Primary & Secondary Call-to-Action buttons: **Start Free Trial** | **Book a Demo**
+- Illustration/mockup of cloud storage dashboard
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3d9d4395-6f8c-4b31-bd69-c82d5e45ea9a) and start prompting.
+### Features Section
+- **Secure Storage:** Encrypted files for privacy  
+- **Team Collaboration:** Share and collaborate with teammates  
+- **Access Anywhere:** Sync across devices worldwide  
 
-Changes made via Lovable will be committed automatically to this repo.
+### Testimonials Section
+- 2–3 customer testimonials with quotes, avatars, and roles  
+- Example: “CloudSync has transformed our workflow!” – Sarah M., Product Manager  
 
-**Use your preferred IDE**
+### Pricing Section
+| Plan     | Price       | Storage      |
+|----------|------------|-------------|
+| Free     | $0/month   | 5GB         |
+| Pro      | $9/month   | 1TB         |
+| Business | $29/month  | Unlimited   |
+- Each plan includes a **Choose Plan** button  
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Footer Section
+- Navigation links: About, Careers, Blog, Contact  
+- Social Media icons: LinkedIn, Twitter, Facebook  
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## Design
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- **Style:** Modern, clean, professional SaaS design  
+- **Colors:** White background with blue/purple gradient accents  
+- **Buttons:** Rounded corners, soft shadows, hover effects  
+- **Typography:** Simple, minimal, professional font  
+- **Layout:** Full-width responsive design (desktop + mobile friendly)  
+- **Visuals:** Modern illustrations and icons to match SaaS theme  
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## Tech Stack
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+- **Frontend:** React + TailwindCSS  
+- **Optional:** Illustrations/Mockups via Figma or similar tools  
+
+---
+
+## Screenshots
+
+![Hero Section](path-to-hero-image.png)  
+![Features Section](path-to-features-image.png)  
+![Pricing Section](path-to-pricing-image.png)  
+
+---
+
+## Installation & Setup
+
+```bash
+# Clone the repo
+git clone https://github.com/yourusername/cloudsync.git
+
+# Navigate into the project folder
+cd cloudsync
+
+# Install dependencies
+npm install
+
+# Start the development server
 npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/3d9d4395-6f8c-4b31-bd69-c82d5e45ea9a) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
