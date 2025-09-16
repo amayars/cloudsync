@@ -1,17 +1,15 @@
-import { Facebook, Twitter, Linkedin } from "lucide-react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import ContactModal from "@/components/ContactModal";
 
 const Footer = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const navigationLinks = [
     { name: "About", href: "#" },
     { name: "Careers", href: "#" },
     { name: "Blog", href: "#" },
-    { name: "Contact", href: "#" }
-  ];
-
-  const socialLinks = [
-    { name: "LinkedIn", icon: Linkedin, href: "#" },
-    { name: "Twitter", icon: Twitter, href: "#" },
-    { name: "Facebook", icon: Facebook, href: "#" }
+    { name: "Contact", href: "" } // handled by modal
   ];
 
   return (
@@ -28,44 +26,36 @@ const Footer = () => {
               Your files. Anytime. Anywhere. Secure cloud storage and team collaboration made simple.
             </p>
           </div>
-          
+
           {/* Navigation Links */}
           <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-12">
             <nav className="flex flex-wrap justify-center md:justify-start gap-6">
-              {navigationLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="text-muted-foreground hover:text-card-foreground transition-colors duration-200"
-                >
-                  {link.name}
-                </a>
-              ))}
+              {navigationLinks.map((link) =>
+                link.name === "Contact" ? (
+                  <button
+                    key={link.name}
+                    onClick={() => setIsModalOpen(true)}
+                    className="text-muted-foreground hover:text-card-foreground transition-colors duration-200"
+                  >
+                    {link.name}
+                  </button>
+                ) : (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    className="text-muted-foreground hover:text-card-foreground transition-colors duration-200"
+                  >
+                    {link.name}
+                  </a>
+                )
+              )}
             </nav>
-            
-            {/* Social Media Icons */}
-            <div className="flex space-x-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  className="p-2 rounded-lg bg-muted hover:bg-accent transition-colors duration-200 group"
-                  aria-label={social.name}
-                >
-                  <social.icon className="w-5 h-5 text-muted-foreground group-hover:text-accent-foreground" />
-                </a>
-              ))}
-            </div>
           </div>
         </div>
-        
-        {/* Bottom Copyright */}
-        <div className="border-t border-border mt-8 pt-8 text-center">
-          <p className="text-muted-foreground">
-            © 2024 CloudSync. All rights reserved. Built with security and privacy in mind.
-          </p>
-        </div>
       </div>
+
+      {/* Contact Modal */}
+      <ContactModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />
     </footer>
   );
 };
